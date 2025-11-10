@@ -9,7 +9,7 @@ from PIL import Image
 def load_h5_model():
     """Loads the pre-trained H5 model for MRI scans."""
     try:
-        model = tf.keras.models.load_model('models/MRI.h5')
+        model = tf.keras.models.load_model('models/MRI.keras')
         print("H5 Model loaded successfully.")
         return model
     except Exception as e:

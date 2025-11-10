@@ -27,7 +27,7 @@ with col1:
     
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded MRI Scan", use_container_width=True)
+        st.image(image, caption="Uploaded MRI Scan", width='stretch')
 
 with col2:
     st.subheader("Prediction Results")
@@ -88,4 +88,4 @@ with col2:
         st.write(f"**Date:** {last_pred['date']}")
         st.write(f"**Confidence Level:** {last_pred['probability'] * 100:.2f}%")
         st.write(f"**Result:** {last_pred['result_text']}")
-        st.image(last_pred["image"], caption="Analyzed MRI Scan", use_container_width=True)
+        st.image(last_pred["image"], caption="Analyzed MRI Scan", width='stretch')
